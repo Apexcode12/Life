@@ -436,11 +436,17 @@ body {
           </div>
           <ul class="tlist" id="rList"></ul>
           <div class="iform" id="fR">
-            <div class="fr"><input class="fi" id="rN" placeholder="Task name"/></div>
             <div class="fr">
-              <input class="fi" id="rT"  type="time" style="flex:1"/>
-              <input class="fi" id="rTE" type="time" style="flex:1"/>
-              <select class="fsel" id="rC">
+  <input class="fi" id="rN" placeholder="Task name"/>
+</div>
+<div class="fr">
+  <button class="fs" onclick="addR()">Save</button>
+  <button class="fc" onclick="closeForm('fR')">Cancel</button>
+</div>
+<div class="fr">
+  <input class="fi" id="rT"  type="time" style="flex:1"/>
+  <input class="fi" id="rTE" type="time" style="flex:1"/>
+  <select class="fsel" id="rC">...</select>
                 <option>Namaz</option><option>Business</option><option>Study</option>
                 <option>Fitness</option><option>Personal</option><option>Meal</option><option>Rest</option>
               </select>
