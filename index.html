@@ -250,9 +250,27 @@ body {
 .pm { background: var(--amber); box-shadow: 0 0 4px rgba(245,158,11,.45); }
 .pl { background: var(--blue);  box-shadow: 0 0 4px rgba(79,142,247,.45); }
 
-/* ─── INLINE FORM ─────────────────────────────────────────── */
-.iform { display: none; padding: 12px 0 2px; border-top: 1px solid rgba(255,255,255,.05); margin-top: 6px; }
-.iform.on { display: block; }
+/* Make add-task forms scrollable on small screens */
+.iform {
+  display: none;
+  padding: 12px 0 2px;
+  border-top: 1px solid rgba(255,255,255,.05);
+  margin-top: 6px;
+
+  max-height: 70vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Keep Save/Cancel visible while scrolling */
+.iform .fr:last-child {
+  position: sticky;
+  bottom: 0;
+  background: rgba(7,11,20,0.95);
+  padding-top: 8px;
+  margin-top: 8px;
+  z-index: 2;
+}
 .fr { display: flex; gap: 6px; margin-bottom: 6px; }
 .fi {
   flex: 1; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.07);
